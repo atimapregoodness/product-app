@@ -153,22 +153,21 @@ h4 {
 }
 
 .farmInfo {
-  width: 100%;
-  background-color: #111111;
-  background-image: url(/assets/ethan-hoover-eIVJAkj1uCs-unsplash.jpg);
-  padding: 4em;
+  width: 20em;
+  background-color: var(---backgroundColor);
+  padding: 1em;
   padding-top: 7em;
+  padding-bottom: 3em;
 }
 .farmInfo h1 {
+  font-size: 25px;
   text-align: center;
-  font-size: 60px;
   text-transform: capitalize;
   color: #fff;
 }
 .farmInfo h2 {
   color: #a7a7a7;
-  font-size: 16px;
-  width: 25em;
+  font-size: 15px;
   padding-top: 1em;
 }
 .farmInfo a {
@@ -194,7 +193,7 @@ h4 {
   text-align: left;
   color: #fff;
   padding-bottom: 0.5em;
-  padding-top: 1em;
+  padding-top: 3em;
   font-size: 20px;
 }
 .farmInfo h5 {
@@ -202,24 +201,51 @@ h4 {
   font-size: 18px;
   padding-left: 0.5em;
   text-align: center;
+  padding-bottom: 3em;
+  border-bottom: 2px solid #252525;
   padding-top: 0.5em;
   font-style: italic;
 }
+.farmInfo .contents {
+  padding-bottom: 3em;
+  border-bottom: 2px solid #252525;
+  margin-bottom: 0.5em;
+}
 
-.farm .products {
+.farmContainer {
+  display: flex;
+}
+.farmContainer .products {
+  padding-top: 4em;
   display: block;
-}
-.farm .products .productContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 5em;
-}
-.farm #btns {
   margin: auto;
-  width: 30em;
 }
-.farm #btns a {
-  margin-left: 5em;
+.farmContainer .products .productContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 1em;
+  overflow-y: scroll;
+  overflow-y: auto;
+  height: 28em;
+}
+.farmContainer .products .productContainer .product {
+  width: 15em;
+  height: 10rem;
+}
+.farmContainer .products .productContainer .product button {
+  font-size: 15px;
+}
+.farmContainer .head {
+  display: grid;
+  place-items: center;
+}
+.farmContainer .head #btns {
+  margin-bottom: 1em;
+  width: 45%;
+  display: flex;
+}
+.farmContainer .head #btns a {
+  margin-left: 3em;
 }
 
 .formContainer {
