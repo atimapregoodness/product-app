@@ -2,11 +2,15 @@
 <% layout('layouts/boilerplate') %>
 <div class="promptMsg">
       <div class="container">
-                  <button id="declineBtn">x</button>
+             
             <h1>Are you sure you want to Delete<p> "<%= farm.name %>" ?</p></h1>
-            <form action="/farms/<%=farm._id%>?_method=DELETE" method="POST">
-                  <button id="deleteBtn">Delete</button>
-            </form>
+            <div class="btns">
+                  <button id="declineBtn">No</button>
+                  <form action="/farms/<%=farm._id%>?_method=DELETE" method="POST">
+                        <button id="deleteBtn">Yes</button>
+                  </form>
+            </div>
+
       </div>
 </div>
 <nav>
@@ -26,6 +30,9 @@
 <div class="farmContainer">
       <div class="farmInfo">
             <div class="container-one">
+                  <div class="profile">
+
+                  </div>
                   <h1><%= farm.name %></h1>
                   <h5>            
                         <% if (farm.description) {%>
@@ -35,7 +42,6 @@
                         <% } %>
                   </h5>
                   <div class="contents">
-                        <h4>Farm Info:</h4>
                         <h2>Location: <br><span id="mainText"><%= farm.location %></span></h2>
                         <h2>Email: <br><span id="mainText"><%= farm.email %></span></h2>
                   </div>
@@ -56,16 +62,14 @@
                         <h1 id="notFound">No product added yet! please add a product</h1>
                   <%} %>
             </div>
-            <% if(products.length){ %>
-                  <div class="productContainer">
-                        <% for (let product of products){%>
-                              <div class="product">
-                                    <h1><%= product.name %></h1>
-                                    <h2>Price: <span>$<%= product.price %></span></h2>
-                                    <a href="/products/<%=product._id%>"><button>View product</button></a>
-                              </div>
-                        <%} %>
-                  </div>
-            <% } %>
+            <div class="productContainer">
+                  <% for (let product of products){%>
+                        <div class="product">
+                              <h1><%= product.name %></h1>
+                              <h2>Price: <span>$<%= product.price %></span></h2>
+                              <a href="/products/<%=product._id%>"><button>View product</button></a>
+                        </div>
+                  <%} %>
+            </div>
       </div>
 </div>
