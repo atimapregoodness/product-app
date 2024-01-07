@@ -38,6 +38,7 @@ nav{
       background-color: var(---backgroundColor);
       padding: 0.3em;
       display: flex;
+      z-index: 1;
 
       h1{
             color: #fff;
@@ -164,16 +165,25 @@ h4{
       border-radius: 0.2em;
 }
 
+.container-one{
+      width: 20em;
+      padding: 1em;
+      position: fixed;
+      // z-index: -1;
+      padding-top: 7em;
+      padding-bottom: 8em;
+      background-color: var(---backgroundColor);
+}
+
 
 .farmInfo{
       width: 20em;
+      //  z-index: -1;
       background-color: var(---backgroundColor);
       // background-image: url(/assets/ethan-hoover-eIVJAkj1uCs-unsplash.jpg);
-      padding: 1em;
-      padding-top: 7em;
-      padding-bottom: 3em;
       // border-bottom-left-radius: 10em;
       // border-bottom-right-radius: 10em;
+
 
       h1{
             font-size: 25px;
@@ -249,14 +259,14 @@ h4{
                   display: grid;
                   grid-template-columns: 1fr 1fr 1fr;
                   padding-top: 1em;
+                  padding-top: 8em;
 
-                  overflow-y: scroll;
-                  overflow-y: auto;
-                  height: 28em;
+                  // overflow-y: scroll;
+                  // overflow-y: auto;
                  
 
                   .product{
-                        width: 15em;
+                        width: 20em;
                         height: 10rem;
 
                         button{
@@ -267,14 +277,19 @@ h4{
       }
 
       .head{
+            position: fixed;
             display: grid;
             place-items: center;
+            margin: auto;
+            width: 70%;
+            margin-top: -1em;
+            padding-top: 1em;
+            background-color: #fff;
             
-            #btns{
+            #btns-one{
                   margin-bottom: 1em;
-                  width: 45%;
-                  
-                  display:flex;
+
+                  margin-left: -3em;
       
                   a{
                         margin-left: 3em;

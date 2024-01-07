@@ -86,7 +86,8 @@ app.get('/farms/:id/products/add', async(req, res) => {
 
 app.post('/farms', async (req, res) =>{
     const farm= new Farm(req.body)
-    await farm.save()
+      await farm.save()
+      // req.flash('sucess', 'Successfully created a farm')
     res.redirect(`/farms/${farm._id}`)
 })
 
