@@ -215,6 +215,19 @@ h4 {
   margin-bottom: 0.5em;
 }
 
+.container .products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.container .products .product {
+  width: 18em;
+  height: fit-content;
+  background-color: rgba(208, 230, 250, 0.87);
+  margin: 1em;
+  padding: 1em;
+  border-radius: 0.3em;
+}
+
 .farmContainer {
   display: flex;
 }

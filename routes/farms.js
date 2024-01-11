@@ -3,6 +3,7 @@ const router = express.Router()
 const appError = require('../utils/appError')
 const wrapAsync = require('../utils/wrapAsync')
 const Farm = require('../models/farm')
+const Product = require('../models/product')
 const flash = require('connect-flash')
 
 const categories = [
@@ -33,7 +34,7 @@ router.get('/:id', wrapAsync( async (req, res, next) => {
 router.get('/:id/products/add', async(req, res) => {
     const {id} = req.params
     const farm = await Farm.findById(id)
-    res.render('product/add', {categories, farm})
+    res.render('products/add', {categories, farm})
 })
 
 router.get('/:id/edit', async (req, res) => {
