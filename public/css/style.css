@@ -221,7 +221,7 @@ h4 {
 }
 .container .products .product {
   width: 18em;
-  height: fit-content;
+  height: auto;
   background-color: rgba(208, 230, 250, 0.87);
   margin: 1em;
   padding: 1em;
@@ -243,7 +243,7 @@ h4 {
 }
 .farmContainer .products .productContainer .product {
   width: 18em;
-  height: fit-content;
+  height: auto;
   background-color: rgba(208, 230, 250, 0.87);
   margin: 1em;
   padding: 1em;
