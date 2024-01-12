@@ -15,6 +15,7 @@
 
 body {
   padding-bottom: 8em;
+  background-color: #131313;
 }
 
 button {
@@ -35,10 +36,11 @@ button:hover {
 nav {
   position: fixed;
   width: 100%;
-  background-color: var(---backgroundColor);
+  background-color: var(---containerColor);
   padding: 0.3em;
   display: flex;
   z-index: 1;
+  backdrop-filter: blur(90px);
 }
 nav h1 {
   color: #fff;
@@ -79,7 +81,6 @@ nav ol li a:hover {
   width: 70em;
   margin: auto;
   padding: 2em;
-  padding-top: 9em;
 }
 
 .heading {
@@ -90,7 +91,7 @@ nav ol li a:hover {
 }
 
 .farms {
-  margin-top: 2em;
+  padding-top: 10em;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -146,7 +147,8 @@ h4 {
   position: fixed;
   padding-top: 6em;
   padding-bottom: 10em;
-  background-color: var(---backgroundColor);
+  background-color: #131313;
+  border-right: 1px solid #353535;
 }
 .container-one .profile {
   width: 7em;
@@ -159,7 +161,7 @@ h4 {
 
 .farmInfo {
   width: 25%;
-  background-color: var(---backgroundColor);
+  background-color: var(---containerColor);
 }
 .farmInfo h1 {
   font-size: 25px;
@@ -218,14 +220,25 @@ h4 {
 .container .products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 10em;
 }
 .container .products .product {
   width: 18em;
   height: auto;
-  background-color: rgba(208, 230, 250, 0.87);
+  background-color: var(---containerColor);
+  border: 1px solid #353535;
   margin: 1em;
   padding: 1em;
   border-radius: 0.3em;
+}
+.container .products .product h1 {
+  color: #fff;
+}
+.container .products .product h2 {
+  color: #b3b3b3;
+}
+.container .products .product h2 span {
+  color: var(---lightGreenColor);
 }
 
 .farmContainer {
@@ -244,13 +257,23 @@ h4 {
 .farmContainer .products .productContainer .product {
   width: 18em;
   height: auto;
-  background-color: rgba(208, 230, 250, 0.87);
+  background-color: var(---containerColor);
+  border: 1px solid #353535;
   margin: 1em;
   padding: 1em;
   border-radius: 0.3em;
 }
 .farmContainer .products .productContainer .product button {
   font-size: 15px;
+}
+.farmContainer .products .productContainer .product h1 {
+  color: #fff;
+}
+.farmContainer .products .productContainer .product h2 {
+  color: #b3b3b3;
+}
+.farmContainer .products .productContainer .product h2 span {
+  color: var(---lightGreenColor);
 }
 .farmContainer .head {
   position: fixed;
@@ -259,7 +282,7 @@ h4 {
   width: 75%;
   margin-top: -1em;
   padding-top: 1em;
-  background-color: #ffffff;
+  background-color: #131313;
 }
 .farmContainer .head #btns-one {
   margin-bottom: 1em;
@@ -267,6 +290,16 @@ h4 {
 }
 .farmContainer .head #btns-one a {
   margin-left: 3em;
+}
+
+.container .head {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  width: 80%;
+  padding-top: 5em;
+  background-color: #131313;
+  padding-bottom: 0.5em;
 }
 
 .formContainer {
