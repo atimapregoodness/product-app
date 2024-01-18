@@ -25,11 +25,14 @@
       <div class="farms">
             <% for (let farm of farms){%> 
                   <div class="farm">
+                        <div class="profile"></div>
                         <h1><%= farm.name %></h1>
                         <div class="describe">
                               <% if (farm.description) {%>
                                     <h2>Description:</h2>
-                                    <h3><%= farm.description %></h3>
+                                    <ul>
+                                          <li><%= farm.description %></li>
+                                    </ul>
                               <%} else{%>
                                     <h4>No description!!!</h4>
                               <% } %>
