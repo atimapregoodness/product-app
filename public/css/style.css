@@ -314,19 +314,40 @@ h4 {
 .formContainer h1 {
   text-align: center;
   padding-bottom: 1em;
+  color: var(---lightGreenColor);
 }
 
 #formSubmit {
   margin: auto;
-  background-color: #ebebeb;
+  background-color: var(---containerColor);
+  border: 1px solid #353535;
   width: 30em;
   padding: 2em;
+  border-radius: 0.5em;
 }
 #formSubmit h1 {
+  color: #fff;
   padding-bottom: 1em;
   text-align: center;
 }
+#formSubmit h2 {
+  color: #9e9e9e;
+  background-color: var(---containerColor);
+  padding: 0.3em;
+  border-radius: 0.3em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+#formSubmit label {
+  color: #cccccc;
+  padding-top: 1em;
+  margin-top: 0.5em;
+}
 #formSubmit input {
+  background-color: var(---containerColor);
+  border: 1px solid #353535;
+  border-radius: 0.3em;
+  color: #fff;
   width: 100%;
   padding: 0.5em;
   font-size: 15px;
@@ -334,12 +355,20 @@ h4 {
   margin-bottom: 0.7em;
 }
 #formSubmit select {
+  background-color: var(---containerColor);
+  border-radius: 0.3em;
+  border: 1px solid #353535;
+  color: #b3b3b3;
+  padding-right: 1em;
   width: 100%;
   padding: 0.5em;
   border: none;
   font-size: 15px;
 }
 #formSubmit textarea {
+  border-radius: 0.3em;
+  background-color: var(---containerColor);
+  color: #fff;
   width: 100%;
   height: 10em;
   padding: 1em;
@@ -348,6 +377,7 @@ h4 {
 }
 #formSubmit button {
   margin-bottom: 0.5em;
+  width: 100%;
 }
 
 .hide {
@@ -492,11 +522,12 @@ h4 {
   padding-top: 10em;
 }
 .error h1 {
-  color: #ff0000;
-  font-size: 70px;
+  color: #ff9090;
+  font-size: 140px;
 }
 .error h3 {
-  font-size: 30px;
+  font-size: 40px;
+  color: #c9c9c9;
 }
 .error a {
   font-size: 18px;

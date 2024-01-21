@@ -14,7 +14,7 @@ const products = require('./routes/products')
 const categories = [
       'fruits',
       'vegetables',
-      'meat',
+      'meat', 
       'bread',
       'books'
 ];
