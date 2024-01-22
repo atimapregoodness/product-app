@@ -1,5 +1,5 @@
 const express = require('express')
-const router = express.Router()
+const router = express.Router({mergeParams: true})
 const wrapAsync = require('../utils/wrapAsync')
 const Product = require('../models/product')
 const flash = require('connect-flash')

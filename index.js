@@ -8,6 +8,7 @@ const appError = require('./utils/appError')
 const flash = require('connect-flash')
 const farms = require('./routes/farms')
 const products = require('./routes/products')
+const session = require('express-session')
 
 // const farmRoute = require('./routes/farmRoute')
 
@@ -18,6 +19,18 @@ const categories = [
       'bread',
       'books'
 ];
+
+const configSession = {
+      secret: 'ohboythisismysecret',
+      resave: false,
+      saveUninitialized: true,
+
+      cookie: {
+            httpOnly: true,
+            expires: Date.now() + 1000 * 60 * 24 * 7,
+            maxAge: 1000 * 60 * 24 * 7
+      }
+}
 
 mongoose.connect('mongodb://127.0.0.1:27017/farmProducts', { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => {
@@ -37,6 +50,7 @@ app.use(express.json())
 app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(flash())
+app.use(session(configSession))
 
 
 // app.use((req, res, next) => {
